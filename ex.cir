@@ -1,0 +1,12 @@
+*** lowr pass filter ***
+
+.options post temp=27
+
+* Input source
+Vin in 0 10
+* other components
+R1 out 0 10k
+C1 in out 500p
+
+.tran 0 2
+.end
