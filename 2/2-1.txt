@@ -1,0 +1,35 @@
+ngspice 2 -> source not_gate.sp 
+
+Circuit: * 2-1
+
+Error on line 0 : m.x1.m1 out in 0 0 x1.cmosn x1.l=0.25u w=2u
+  Unable to find definition of model x1.cmosn - default assumed 
+
+ unknown parameter (x1.l) 
+Error on line 0 : m.x1.m2 out in vdd vdd x1.cmosp x1.l=0.25u w=4u
+  Unable to find definition of model x1.cmosp - default assumed 
+
+ unknown parameter (x1.l) 
+ngspice 2 -> run
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Warning: v1: no DC value, transient time 0 value used
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                        2.5
+in                                           0
+out                                    2.35841
+v1#branch                                    0
+v0#branch                         -2.36841e-12
+
+
+
+No. of Data Rows : 3020
+ngspice 2 -> plot v(in) v(out)
+ngspice 2 -> 
+x0 = 1.73714e-07, y0 = 1.5
+
